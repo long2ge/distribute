@@ -73,12 +73,13 @@ $app->configure('app');
 */
 
 // $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
+//     \Fruitcake\Cors\HandleCors::class,
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+ $app->routeMiddleware([
+ //     'auth' => App\Http\Middleware\Authenticate::class,
+      'cors' => \Fruitcake\Cors\HandleCors::class,
+ ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +106,14 @@ $app->bind('path.public', function() {
 });
 $app->configure('modules');
 $app->register(\Nwidart\Modules\LumenModulesServiceProvider::class);
+
+/*
+|--------------------------------------------------------------------------
+| laravel-cors
+|--------------------------------------------------------------------------
+*/
+$app->configure('cors');
+$app->register(Fruitcake\Cors\CorsServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

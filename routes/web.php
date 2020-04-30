@@ -11,6 +11,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+//$router->get('/', function () use ($router) {
+//    return $router->app->version();
+//})->middleware('cors');
+
+$router->group(['middleware' => 'cors'], function () use ($router) {
+    $router->get('/', function () use ($router) {
+        return $router->app->version();
+    });
 });
