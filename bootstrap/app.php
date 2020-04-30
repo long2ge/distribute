@@ -97,6 +97,17 @@ $app->configure('app');
 
 /*
 |--------------------------------------------------------------------------
+| laravel-modules
+|--------------------------------------------------------------------------
+*/
+$app->bind('path.public', function() {
+    return __DIR__ . 'public/';
+});
+$app->configure('modules');
+$app->register(\Nwidart\Modules\LumenModulesServiceProvider::class);
+
+/*
+|--------------------------------------------------------------------------
 | Load The Application Routes
 |--------------------------------------------------------------------------
 |
