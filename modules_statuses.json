@@ -4,5 +4,6 @@
     "OpenApi": true,
     "Car": true,
     "News": true,
-    "Admin": true
+    "Admin": true,
+    "MiniProgram": true
 }
