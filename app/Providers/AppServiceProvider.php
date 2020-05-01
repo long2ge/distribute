@@ -40,5 +40,12 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
+
+        /*
+        |--------------------------------------------------------------------------
+        | redis
+        |--------------------------------------------------------------------------
+        */
+        $this->app->register(\Illuminate\Redis\RedisServiceProvider::class);
     }
 }

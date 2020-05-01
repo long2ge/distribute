@@ -7,9 +7,11 @@
     "require": {
         "php": "^7.2.5",
         "fruitcake/laravel-cors": "^1.0",
+        "illuminate/redis": "^7.9",
         "laravel/lumen-framework": "^7.0",
         "league/flysystem": "^1.0",
-        "nwidart/laravel-modules": "^7.1"
+        "nwidart/laravel-modules": "^7.1",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.7",
