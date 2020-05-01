@@ -8,6 +8,8 @@
         "Modules\\Order\\Providers\\OrderServiceProvider"
     ],
     "aliases": {},
-    "files": [],
+    "files": [
+        "Routes/api.php"
+    ],
     "requires": []
 }
