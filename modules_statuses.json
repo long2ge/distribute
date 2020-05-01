@@ -1,5 +1,6 @@
 {
     "Order": true,
     "User": true,
-    "OpenApi": true
+    "OpenApi": true,
+    "Car": true
 }
