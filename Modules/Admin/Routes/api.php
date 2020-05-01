@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/admin/test', function () {
-    return 'admin test';
-});
+require __DIR__ . '/V1/api_routes.php';
