@@ -1,0 +1,15 @@
+{
+    "name": "OpenApi",
+    "alias": "openapi",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\OpenApi\\Providers\\OpenApiServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Routes/api.php"
+    ],
+    "requires": []
+}
