@@ -2,5 +2,6 @@
     "Order": true,
     "User": true,
     "OpenApi": true,
-    "Car": true
+    "Car": true,
+    "News": true
 }
