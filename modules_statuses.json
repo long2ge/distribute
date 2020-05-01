@@ -3,5 +3,6 @@
     "User": true,
     "OpenApi": true,
     "Car": true,
-    "News": true
+    "News": true,
+    "Admin": true
 }
