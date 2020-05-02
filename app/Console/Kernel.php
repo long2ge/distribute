@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\AppUpdateCommand;
 use App\Console\Commands\TestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -15,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         TestCommand::class,
+        AppUpdateCommand::class,
     ];
 
     /**
