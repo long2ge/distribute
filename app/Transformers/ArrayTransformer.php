@@ -27,5 +27,5 @@ class ArrayTransformer extends BaseTransformer
     {
         return is_array($data) ? $data : $data->toArray();
     }
-    
+
 }
