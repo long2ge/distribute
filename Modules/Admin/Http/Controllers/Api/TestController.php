@@ -9,10 +9,12 @@
 namespace Modules\Admin\Http\Controllers\Api;
 
 
+use App\Transformers\ArrayTransformer;
+use App\User;
 use Illuminate\Http\Request;
-use Modules\Admin\Http\Controllers\AdminController;
+use Modules\Admin\Http\Controllers\AdminAppController;
 
-class TestController extends AdminController
+class TestController extends AdminAppController
 {
     /**
      * get 测试
@@ -63,7 +65,13 @@ class TestController extends AdminController
             'keyword',
         ]);
 
-        return response()->json($attributes + ['get test' => 1]);
+        $a = ['get test' => 1];
+
+
+        $users = User::query()->paginate(2);
+
+        return $this->responseArray($users);
+//        return response()->json($attributes + ['get test' => 1]);
     }
 
     /**

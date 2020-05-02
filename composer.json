@@ -10,6 +10,7 @@
         "illuminate/redis": "^7.9",
         "laravel/lumen-framework": "^7.0",
         "league/flysystem": "^1.0",
+        "league/fractal": "^0.19.2",
         "mpociot/laravel-apidoc-generator": "^4.7",
         "nwidart/laravel-modules": "^7.1",
         "predis/predis": "^1.1"
