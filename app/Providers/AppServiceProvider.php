@@ -55,5 +55,14 @@ class AppServiceProvider extends ServiceProvider
         */
         $this->app->configure('apidoc');
         $this->app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
+        | laravel-wechat
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('wechat');
+        $this->app->register(\Overtrue\LaravelWeChat\ServiceProvider::class);
+
     }
 }
