@@ -47,5 +47,13 @@ class AppServiceProvider extends ServiceProvider
         |--------------------------------------------------------------------------
         */
         $this->app->register(\Illuminate\Redis\RedisServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
+        | laravel-apidoc-generator
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('apidoc');
+        $this->app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
     }
 }
