@@ -4,6 +4,7 @@ namespace Modules\Admin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Admin\Facades\AdminFacade;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,10 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        // 绑定后台门面
+        $this->app->bind('app.admin', function(){
+            return new AdminFacade();
+        });
     }
 
     /**
