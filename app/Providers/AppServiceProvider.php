@@ -66,8 +66,18 @@ class AppServiceProvider extends ServiceProvider
 
         /*
         |--------------------------------------------------------------------------
+        | lumen-passport    composer require dusterio/lumen-passport
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('auth');
+        $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
+        $this->app->register(\Dusterio\LumenPassport\PassportServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
         | 引入其他的包
         |   composer require "overtrue/easy-sms"
+        |   composer require league/fractal
         |--------------------------------------------------------------------------
         */
     }
