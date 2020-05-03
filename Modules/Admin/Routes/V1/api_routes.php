@@ -6,4 +6,5 @@ Route::group([
     'namespace' => 'Modules\Admin\Http\Controllers\Api'
 ], function () {
     require __DIR__ . '/Api/Test.php';
+    require __DIR__ . '/Api/Article.php';
 });

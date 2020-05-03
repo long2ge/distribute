@@ -46,4 +46,23 @@ class InvokeService
         return $adminFacade;
     }
 
+    /**
+     * @return \Laravel\Lumen\Application|mixed|\Modules\News\Facades\NewsFacade
+     */
+    public function getNewsFacade()
+    {
+        $newsFacade = app('app.news');
+
+        $newsFacade->setInvoker($this->getInvoker());
+
+        return $newsFacade;
+    }
+
+    public function demo()
+    {
+        $service = new InvokeService(new InvokerEntity());
+
+        return $service->getAdminFacade()->test();
+    }
+
 }

@@ -4,6 +4,7 @@ namespace Modules\News\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\News\Facades\NewsFacade;
 
 class NewsServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,10 @@ class NewsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        // 绑定咨询门面
+        $this->app->bind('app.news', function(){
+            return new NewsFacade();
+        });
     }
 
     /**
