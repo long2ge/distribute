@@ -7,6 +7,21 @@ use App\Models\AbstractUser;
 
 class User extends AbstractUser
 {
+    /**
+     * The connection name for the model.
+     * 库链接的配置名
+     *
+     * @var string
+     */
+    protected $connection = 'user';
+
+    /**
+     * Table Name
+     * 表名
+     *
+     * @var string
+     */
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -14,16 +29,18 @@ class User extends AbstractUser
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
-    ];
-
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = [
+        'name',
+        'email',
         'password',
+        'email_verified_at',
+        'remember_token',
+        'phone',
+        'real_name',
+        'birthday',
+        'sex', // 1代表男, 0代表女
+        'union_id',
+        'mini_openid',
+        'avatar',
     ];
 
     /**

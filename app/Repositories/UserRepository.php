@@ -12,6 +12,9 @@ namespace App\Repositories;
 
 class UserRepository extends AbstractUserRepository
 {
+    const DEMO_NAME = '测试1234';
+    const DEMO_PASSWORD = '123456';
+
     public function getProviderClass(): string
     {
         $provider = config('auth.guards.api.provider');
