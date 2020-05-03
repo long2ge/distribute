@@ -4,6 +4,7 @@ namespace Modules\OpenApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\OpenApi\Facades\OpenApiFacade;
 
 class OpenApiServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,12 @@ class OpenApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        /**
+         * 第三方系统门面
+         */
+        $this->app->singleton('app.openApi', function () {
+            return new OpenApiFacade();
+        });
     }
 
     /**

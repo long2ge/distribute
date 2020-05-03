@@ -4,6 +4,7 @@ namespace Modules\MessageCenter\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\MessageCenter\Facades\MessageCenterFacade;
 
 class MessageCenterServiceProvider extends ServiceProvider
 {
@@ -36,6 +37,12 @@ class MessageCenterServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        /**
+         * 消息中心系统门面
+         */
+        $this->app->singleton('app.messageCenter', function () {
+            return new MessageCenterFacade();
+        });
 
     }
 

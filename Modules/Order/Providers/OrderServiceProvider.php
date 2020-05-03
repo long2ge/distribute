@@ -5,6 +5,7 @@ namespace Modules\Order\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 use Modules\Order\Console\TestOrderCommand;
+use Modules\Order\Facades\OrderFacade;
 
 class OrderServiceProvider extends ServiceProvider
 {
@@ -41,10 +42,12 @@ class OrderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-//        $this->app->register(XxxServiceProvider::class);
-//        $this->app->bind('service.miniPrograms', function() {
-//            return new MiniProgramsService();
-//        });
+        /**
+         * 订单系统门面
+         */
+        $this->app->singleton('app.order', function () {
+            return new OrderFacade();
+        });
     }
 
     /**

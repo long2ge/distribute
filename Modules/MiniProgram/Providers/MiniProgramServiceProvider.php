@@ -4,6 +4,7 @@ namespace Modules\MiniProgram\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\MiniProgram\Facades\MiniProgramFacade;
 
 class MiniProgramServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,12 @@ class MiniProgramServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        /**
+         * 小程序系统门面
+         */
+        $this->app->singleton('app.miniProgram', function () {
+            return new MiniProgramFacade();
+        });
     }
 
     /**

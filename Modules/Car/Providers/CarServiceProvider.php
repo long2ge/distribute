@@ -4,6 +4,7 @@ namespace Modules\Car\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Car\Facades\CarFacade;
 
 class CarServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,12 @@ class CarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        /**
+         * 车辆系统门面
+         */
+        $this->app->singleton('app.car', function(){
+            return new CarFacade();
+        });
     }
 
     /**

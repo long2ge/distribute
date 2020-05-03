@@ -38,7 +38,7 @@ class AdminServiceProvider extends ServiceProvider
     public function register()
     {
         // 绑定后台门面
-        $this->app->bind('app.admin', function(){
+        $this->app->singleton('app.admin', function(){
             return new AdminFacade();
         });
     }

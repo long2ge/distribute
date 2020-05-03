@@ -4,6 +4,7 @@ namespace Modules\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\User\Facades\UserFacade;
 
 class UserServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,12 @@ class UserServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        /**
+         * 用户系统门面
+         */
+        $this->app->singleton('app.user', function () {
+            return new UserFacade();
+        });
     }
 
     /**
