@@ -15,8 +15,20 @@
 //    return $router->app->version();
 //})->middleware('cors');
 
+use App\Repositories\UserRepository;
+use App\Services\AuthorizationManageServer;
+use Psr\Http\Message\ServerRequestInterface;
+
 $router->group(['middleware' => 'cors'], function () use ($router) {
     $router->get('/', function () use ($router) {
         return $router->app->version();
     });
+
+    $router->get('/login/test', function (ServerRequestInterface $request) {
+        $UserRepository = new UserRepository();
+        $AuthorizationManageServer = new AuthorizationManageServer($UserRepository);
+        return $AuthorizationManageServer->login($request, 1111, '');
+    });
 });
+
+

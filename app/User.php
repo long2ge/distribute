@@ -2,15 +2,11 @@
 
 namespace App;
 
-use Illuminate\Auth\Authenticatable;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Database\Eloquent\Model;
-use Laravel\Lumen\Auth\Authorizable;
+use App\Models\AbstractUser;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract
+
+class User extends AbstractUser
 {
-    use Authenticatable, Authorizable;
 
     /**
      * The attributes that are mass assignable.
@@ -29,4 +25,18 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    /**
+     * 根据用户名字获取密码
+     * User: long
+     * Date: 2019/4/7 6:22 PM
+     * Describe:
+     * @param $username
+     * @return mixed
+     */
+    public function findForPassport($username)
+    {
+        return (new static())->where('name', $username)->first();
+    }
+
 }
