@@ -33,7 +33,7 @@ class ArticleController extends AdminAppController
      * User: long
      * Date: 2020/5/3 17:12 PM
      *
-     * @group 文章
+     * @group Article
      *
      * @response 200 {
      *  "current_page": 1,

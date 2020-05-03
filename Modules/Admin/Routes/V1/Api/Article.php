@@ -12,7 +12,8 @@
  *  ```````````````````````````
  */
 Route::get('/article/index',  [
-    'as' => 'admin.article.index', 'uses' => 'Article\ArticleController@index'
+    'as' => 'api.admin.article.index',
+    'uses' => 'Article\ArticleController@index',
 ]);
 
 //
