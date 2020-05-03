@@ -150,8 +150,8 @@ return [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                    // 'Authorization' => 'Bearer {token}',
-                    // 'Api-Version' => 'v2',
+                    'Authorization' => 'Bearer {token}',
+                    'Api-Version' => 'v1',
                 ],
 
                 /*

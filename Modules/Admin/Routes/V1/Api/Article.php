@@ -11,7 +11,9 @@
  *  文章列表
  *  ```````````````````````````
  */
-Route::get('/article/index',  'Article\ArticleController@index');
+Route::get('/article/index',  [
+    'as' => 'admin.article.index', 'uses' => 'Article\ArticleController@index'
+]);
 
 //
 ///**
