@@ -9,7 +9,6 @@
 namespace App\Services;
 
 
-use App\Entities\InvokerEntity;
 use App\Traits\InvokeTrait;
 
 /**
@@ -22,15 +21,6 @@ class InvokeService
     use InvokeTrait;
 
     /**
-     * InvokeService constructor.
-     * @param InvokerEntity $invoker
-     */
-    public function __construct(InvokerEntity $invoker)
-    {
-        $this->setInvoker($invoker);
-    }
-
-    /**
      * 获取后台门面
      * User: long
      * Date: 2020/5/2 5:38 PM
@@ -39,11 +29,7 @@ class InvokeService
      */
     public function getAdminFacade()
     {
-        $adminFacade = app('app.admin');
-
-        $adminFacade->setInvoker($this->getInvoker());
-
-        return $adminFacade;
+        return app('app.admin');
     }
 
     /**
@@ -55,11 +41,7 @@ class InvokeService
      */
     public function getNewsFacade()
     {
-        $newsFacade = app('app.news');
-
-        $newsFacade->setInvoker($this->getInvoker());
-
-        return $newsFacade;
+        return app('app.news');
     }
 
     /**
@@ -71,11 +53,7 @@ class InvokeService
      */
     public function getCarFacade()
     {
-        $carFacade = app('app.car');
-
-        $carFacade->setInvoker($this->getInvoker());
-
-        return $carFacade;
+        return app('app.car');
     }
 
     /**
@@ -87,11 +65,7 @@ class InvokeService
      */
     public function getMessageCenterFacade()
     {
-        $messageCenterFacade = app('app.messageCenter');
-
-        $messageCenterFacade->setInvoker($this->getInvoker());
-
-        return $messageCenterFacade;
+        return app('app.messageCenter');
     }
 
     /**
@@ -103,11 +77,7 @@ class InvokeService
      */
     public function getMiniProgramFacade()
     {
-        $miniProgramFacade = app('app.miniProgram');
-
-        $miniProgramFacade->setInvoker($this->getInvoker());
-
-        return $miniProgramFacade;
+        return app('app.miniProgram');
     }
 
     /**
@@ -119,11 +89,7 @@ class InvokeService
      */
     public function getOpenApiFacade()
     {
-        $openApiFacade = app('app.openApi');
-
-        $openApiFacade->setInvoker($this->getInvoker());
-
-        return $openApiFacade;
+        return app('app.openApi');
     }
 
     /**
@@ -135,11 +101,7 @@ class InvokeService
      */
     public function getOrderFacade()
     {
-        $orderFacade = app('app.order');
-
-        $orderFacade->setInvoker($this->getInvoker());
-
-        return $orderFacade;
+        return app('app.order');
     }
 
     /**
@@ -151,25 +113,7 @@ class InvokeService
      */
     public function getUserFacade()
     {
-        $userFacade = app('app.user');
-
-        $userFacade->setInvoker($this->getInvoker());
-
-        return $userFacade;
-    }
-
-    /**
-     * 例子
-     * User: long
-     * Date: 2020/5/3 10:38 PM
-     * Describe:
-     * @return string
-     */
-    private function demo()
-    {
-        $service = new InvokeService(new InvokerEntity());
-
-        return $service->getAdminFacade()->test();
+        return app('app.user');
     }
 
 }

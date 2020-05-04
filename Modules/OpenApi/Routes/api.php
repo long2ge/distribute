@@ -12,11 +12,6 @@
 */
 
 
-use App\Entities\InvokerEntity;
-use App\Services\InvokeService;
-
 Route::get('/open-api/test', function () {
-    $service = new InvokeService(new InvokerEntity());
-
-    return $service->getAdminFacade()->test();
+    return 'open - api test';
 });

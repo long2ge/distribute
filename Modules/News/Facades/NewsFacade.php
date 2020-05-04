@@ -12,6 +12,11 @@ namespace Modules\News\Facades;
 use App\Traits\InvokeTrait;
 use Modules\News\Services\ArticleService;
 
+/**
+ * 资讯系统门面
+ * Class NewsFacade
+ * @package Modules\News\Facades
+ */
 class NewsFacade
 {
     use InvokeTrait;

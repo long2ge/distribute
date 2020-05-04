@@ -8,13 +8,10 @@
 
 namespace Modules\Admin\Http\Controllers\Api\Article;
 
-
-use App\Entities\InvokerEntity;
 use App\Services\InvokeService;
 use App\User;
 use Illuminate\Http\Request;
 use Modules\Admin\Http\Controllers\AdminAppController;
-use Modules\News\Services\ArticleService;
 
 class ArticleController extends AdminAppController
 {
@@ -23,9 +20,7 @@ class ArticleController extends AdminAppController
 
     public function __construct()
     {
-        $service = new InvokeService(new InvokerEntity());
-
-        $this->newsFacade = $service->getNewsFacade();
+        $this->newsFacade = app(InvokeService::class)->getNewsFacade();
     }
 
     /**
