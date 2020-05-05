@@ -75,6 +75,14 @@ class AppServiceProvider extends ServiceProvider
 
         /*
         |--------------------------------------------------------------------------
+        | swagger-lume    composer require "darkaonline/swagger-lume:7.*"
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('swagger-lume');
+        $this->app->register(\SwaggerLume\ServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
         | 引入其他的包
         |   composer require "overtrue/easy-sms"
         |   composer require league/fractal

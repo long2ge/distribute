@@ -28,4 +28,9 @@ $router->group(['middleware' => 'cors'], function () use ($router) {
     });
 });
 
+Route::get('/hello/{id}',  [
+    'uses' => 'SwaggerController@test',
+]);
+
+
 
