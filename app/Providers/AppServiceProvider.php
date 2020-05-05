@@ -53,8 +53,8 @@ class AppServiceProvider extends ServiceProvider
         | laravel-apidoc-generator  composer require mpociot/laravel-apidoc-generator
         |--------------------------------------------------------------------------
         */
-        $this->app->configure('apidoc');
-        $this->app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
+//        $this->app->configure('apidoc');
+//        $this->app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
 
         /*
         |--------------------------------------------------------------------------
