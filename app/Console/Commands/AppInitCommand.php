@@ -70,15 +70,20 @@ class AppInitCommand extends Command
             $this->createdSoftLink($source, $target);
         }
 
-        // 生成文件目录
-        $modules = json_decode(file_get_contents(base_path('modules_statuses.json')), true);
-        foreach ($modules as $module => $status) {
-            if (! $status) continue;
+        // 生成Modules目录
+        $moduleJsonPath = base_path('modules_statuses.json');
+        if (file_exists($moduleJsonPath)) {
+            $modules = json_decode($moduleJsonPath, true) ?? [];
 
-            $source = "/Modules/{$module}/Docs/";
-            $target = "/app/Docs/{$module}";
-            $this->createdSoftLink($source, $target);
+            foreach ($modules as $module => $status) {
+                if (! $status) continue;
+
+                $source = "/Modules/{$module}/Docs/";
+                $target = "/app/Docs/{$module}";
+                $this->createdSoftLink($source, $target);
+            }
         }
+
     }
 
     /**
