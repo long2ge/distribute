@@ -83,6 +83,13 @@ class AppServiceProvider extends ServiceProvider
 
         /*
         |--------------------------------------------------------------------------
+        | flysystem  composer require league/flysystem
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('filesystems');
+
+        /*
+        |--------------------------------------------------------------------------
         | 引入其他的包
         |   composer require "overtrue/easy-sms"
         |   composer require league/fractal
