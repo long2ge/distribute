@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\AppInitCommand;
 use App\Console\Commands\AppUpdateCommand;
 use App\Console\Commands\TestCommand;
 use Illuminate\Console\Scheduling\Schedule;
@@ -15,6 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        AppInitCommand::class,
         TestCommand::class,
         AppUpdateCommand::class,
     ];

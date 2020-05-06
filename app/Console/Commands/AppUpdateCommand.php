@@ -39,7 +39,7 @@ class AppUpdateCommand extends Command
     public function handle()
     {
         $commands = [
-            'php artisan apidoc:generate',
+            'php artisan swagger-lume:generate',
             'php artisan ide-helper:generate',
             'php artisan ide-helper:meta',
         ];
@@ -51,7 +51,6 @@ class AppUpdateCommand extends Command
             $this->info('end exec ' . $command . "\r\n");
             $this->info('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
         }
-
     }
 
 }
