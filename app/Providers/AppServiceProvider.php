@@ -98,6 +98,14 @@ class AppServiceProvider extends ServiceProvider
 
         /*
         |--------------------------------------------------------------------------
+        | laravels  composer require "hhxsv5/laravel-s:~3.7.0" -vvv
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('laravels');
+        $this->app->register(\Hhxsv5\LaravelS\Illuminate\LaravelSServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
         | 引入其他的包
         |   composer require "overtrue/easy-sms"
         |   composer require league/fractal
