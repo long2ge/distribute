@@ -90,6 +90,14 @@ class AppServiceProvider extends ServiceProvider
 
         /*
         |--------------------------------------------------------------------------
+        | lumen-horizon  composer require carsguide/lumen-horizon "^4.0"
+        |--------------------------------------------------------------------------
+        */
+        $this->app->configure('horizon');
+        $this->app->register(\Laravel\Horizon\HorizonServiceProvider::class);
+
+        /*
+        |--------------------------------------------------------------------------
         | 引入其他的包
         |   composer require "overtrue/easy-sms"
         |   composer require league/fractal
