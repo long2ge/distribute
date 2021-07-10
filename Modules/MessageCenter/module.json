@@ -1,0 +1,15 @@
+{
+    "name": "MessageCenter",
+    "alias": "messagecenter",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\MessageCenter\\Providers\\MessageCenterServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Routes/api.php"
+    ],
+    "requires": []
+}

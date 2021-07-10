@@ -1,0 +1,15 @@
+{
+    "name": "MiniProgram",
+    "alias": "miniprogram",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\MiniProgram\\Providers\\MiniProgramServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Routes/api.php"
+    ],
+    "requires": []
+}

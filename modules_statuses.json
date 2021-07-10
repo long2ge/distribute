@@ -1,0 +1,10 @@
+{
+    "Order": true,
+    "User": true,
+    "OpenApi": true,
+    "Car": true,
+    "News": true,
+    "Admin": true,
+    "MiniProgram": true,
+    "MessageCenter": true
+}

@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/miniprogram",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\MiniProgram\\Providers\\MiniProgramServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MiniProgram\\": ""
+        }
+    }
+}

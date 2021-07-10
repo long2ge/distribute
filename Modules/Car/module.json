@@ -1,0 +1,15 @@
+{
+    "name": "Car",
+    "alias": "car",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Car\\Providers\\CarServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Routes/api.php"
+    ],
+    "requires": []
+}
